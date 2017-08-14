@@ -23,7 +23,7 @@
 #
 # === Placeholder ===
 #
-# The plugin replaces %player%layer% with the playername and %command%ommand% with the command esecuted by the player
+# The plugin replaces %player% with the playername and %command% with the command executed by the player
 #
 ##############################
 
@@ -38,11 +38,11 @@
 #
 ############
 
-on_command: "&c%player%layer% &aused the command &c%command%&a."
-enable_tracker: "&aYou are now watching &c%player%&a's commands."
-disable_tracker: "&aYou are no longer watching &c%player%&a's commands."
-player_not_existant: "&aThat player does not exist."
-player_offline: "&aThat player is not online."
+on_command: "&c%player% &aused the command &c%command%&a."
+enable_tracker: "&aYou are now tracking &c%player%&a's commands."
+disable_tracker: "&aYou are no longer tracking &c%player%&a's commands."
+player_not_existant: "&aThis player does not exist."
+player_offline: "&aThis player is not online."
 specify_name: "&aPlease enter a players name."
 
 ###############
