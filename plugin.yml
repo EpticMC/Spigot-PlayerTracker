@@ -1,0 +1,18 @@
+name: PlayerTracker
+version: 1.0.0
+description: Track every command of a specific player
+
+author: NullDev
+
+main: org.nulldev.PlayerTracker.main
+
+commands:
+  track:
+    description: Main command
+    aliases: tc
+    permission: playertracker.track
+    usage: Usage >> /tc <playername> or /track <playername>
+    
+permissions:
+  commandwatcher.*:
+    description: Full Access
