@@ -51,18 +51,18 @@ public class CmdHandler implements CommandExecutor {
                 }
                 this.plugin.trackers.add(new Tracker(psender.getUniqueId(), player.getUniqueId()));
                 BulkSend.sendWithPlayer(psender, Config.msgEnableTracker, player.getDisplayName(), this.plugin);
-                BulkSend.send(psender, Config.msgEnterPlayersName, this.plugin);
                 return true;
             }
-            this.permissionError(psender);
+            else this.permissionError(psender);
             return true;
         }
         else {
         	String msg = " \n&4-- &6PlayerTracker &4--\n \n";
         	if (psender.hasPermission("playertracker.track") || psender.isOp()){
-                    msg = String.valueOf(msg) + "# &c/tc <player> &b- &aTrack a players commands./n";
+        		msg = String.valueOf(msg) + Config.msgEnterPlayersName;
+                msg = String.valueOf(msg) + "# &c/tc <player> &b- &aTrack a players commands./n";
         	    msg = String.valueOf(msg) + "&4----------------------";
-		    BulkSend.sendWithoutPrefix(psender, msg, this.plugin);
+		        BulkSend.sendWithoutPrefix(psender, msg, this.plugin);
         	}
         	else this.permissionError(psender);
         	return true;
