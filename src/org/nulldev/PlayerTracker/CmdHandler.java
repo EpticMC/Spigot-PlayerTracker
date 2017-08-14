@@ -1,5 +1,11 @@
 package org.nulldev.PlayerTracker;
 
+////////////////////////////////
+//----------------------------//
+// Copyright (c) 2017 NulLDev //
+//----------------------------//
+////////////////////////////////
+
 import org.nulldev.PlayerTracker.Tracker;
 import org.nulldev.PlayerTracker.Config;
 import org.nulldev.PlayerTracker.Main;
@@ -17,9 +23,7 @@ import org.bukkit.entity.Player;
 public class CmdHandler implements CommandExecutor {
     private Main plugin;
 
-    public CmdHandler(Main plugin) {
-        this.plugin = plugin;
-    }
+    public CmdHandler(Main plugin) { this.plugin = plugin; }
 
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (!(sender instanceof Player)) {
@@ -56,9 +60,9 @@ public class CmdHandler implements CommandExecutor {
         else {
         	String msg = " \n&4-- &6PlayerTracker &4--\n \n";
         	if (psender.hasPermission("playertracker.track") || psender.isOp()){
-        		msg = String.valueOf(msg) + "# &c/tc <player> &b- &aTrack a players commands./n";
-        		msg = String.valueOf(msg) + "&4----------------------";
-            	BulkSend.sendWithoutPrefix(psender, msg, this.plugin);
+                    msg = String.valueOf(msg) + "# &c/tc <player> &b- &aTrack a players commands./n";
+        	    msg = String.valueOf(msg) + "&4----------------------";
+		    BulkSend.sendWithoutPrefix(psender, msg, this.plugin);
         	}
         	else this.permissionError(psender);
         	return true;
