@@ -29,7 +29,7 @@ public class CmdListener implements Listener {
         int n2;
         if (this.plugin.trackers.size() > 0) {
             for (Tracker w : this.plugin.trackers) {
-                if (PlayerFetch.uuid(w.getTraget()) != e.getPlayer().getUniqueId() || !PlayerFetch.offline(w.getTracker()).isOnline()) continue;
+                if (PlayerFetch.uuid(w.getTarget()) != e.getPlayer().getUniqueId() || !PlayerFetch.offline(w.getTracker()).isOnline()) continue;
                 if (Config.commandsToIgnore.length > 0) {
                     args = e.getMessage().replace("/", "").split(" ");
                     arrstring = Config.commandsToIgnore;

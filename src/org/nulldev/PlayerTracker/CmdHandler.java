@@ -39,7 +39,7 @@ public class CmdHandler implements CommandExecutor {
                     return true;
                 }
                 for (Tracker w : this.plugin.trackers) {
-                    if (psender.getUniqueId() != PlayerFetch.uuid(w.getTracker()) || oplayer.getUniqueId() != PlayerFetch.uuid(w.getTraget())) continue;
+                    if (psender.getUniqueId() != PlayerFetch.uuid(w.getTracker()) || oplayer.getUniqueId() != PlayerFetch.uuid(w.getTarget())) continue;
                     this.plugin.trackers.remove(w);
                     BulkSend.sendWithPlayer(psender, Config.msgDisableTracker, oplayer.getName(), this.plugin);
                     return true;

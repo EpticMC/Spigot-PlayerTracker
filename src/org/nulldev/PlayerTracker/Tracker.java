@@ -18,5 +18,5 @@ public class Tracker {
     }
 
     public UUID getTracker() { return this.trackers; }
-    public UUID getTraget() { return this.target; }
+    public UUID getTarget() { return this.target; }
 }
