@@ -38,6 +38,7 @@ Config Overview:
 # === Placeholder ===
 #
 # The plugin replaces %player% with the playername and %command% with the command executed by the player
+# They can be used anywhere in the messages.
 #
 ##############################
 
