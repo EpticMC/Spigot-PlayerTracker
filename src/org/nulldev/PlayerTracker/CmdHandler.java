@@ -25,7 +25,7 @@ public class CmdHandler implements CommandExecutor {
 
     public CmdHandler(Main plugin) { this.plugin = plugin; }
 
-	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (!(sender instanceof Player)) {
             sender.sendMessage("This command can't be executed from the console");
             return false;
@@ -33,7 +33,7 @@ public class CmdHandler implements CommandExecutor {
         Player psender = (Player)sender;
         if (args.length > 0) {
             if (sender.hasPermission("playertracker.track") || sender.isOp()) {
-				OfflinePlayer oplayer = Bukkit.getOfflinePlayer((String)args[0]);
+                OfflinePlayer oplayer = Bukkit.getOfflinePlayer((String)args[0]);
                 if (oplayer == null) {
                     BulkSend.send(psender, Config.msgPlayerNotExist, this.plugin);
                     return true;
@@ -57,15 +57,15 @@ public class CmdHandler implements CommandExecutor {
             return true;
         }
         else {
-        	String msg = " \n&4-- &6PlayerTracker &4--\n \n";
-        	if (psender.hasPermission("playertracker.track") || psender.isOp()){
-        		msg = String.valueOf(msg) + Config.msgEnterPlayersName;
+            String msg = " \n&4-- &6PlayerTracker &4--\n \n";
+            if (psender.hasPermission("playertracker.track") || psender.isOp()){
+                msg = String.valueOf(msg) + Config.msgEnterPlayersName;
                 msg = String.valueOf(msg) + "# &c/tc <player> &b- &aTrack a players commands./n";
-        	    msg = String.valueOf(msg) + "&4----------------------";
-		        BulkSend.sendWithoutPrefix(psender, msg, this.plugin);
-        	}
-        	else this.permissionError(psender);
-        	return true;
+                msg = String.valueOf(msg) + "&4----------------------";
+                BulkSend.sendWithoutPrefix(psender, msg, this.plugin);
+            }
+            else this.permissionError(psender);
+            return true;
         }
     }
 

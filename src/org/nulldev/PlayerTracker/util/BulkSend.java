@@ -42,7 +42,7 @@ public class BulkSend {
     }
 
     public static void sendWithoutPrefix(Player player, String msg, Main plugin) {
-		String[] s;
+        String[] s;
         String msg2 = ChatColor.translateAlternateColorCodes((char)'&', (String)msg);
         String[] arrstring = s = msg2.split("\\n");
         int n = arrstring.length;

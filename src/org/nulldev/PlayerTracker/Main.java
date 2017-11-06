@@ -44,8 +44,8 @@ public class Main extends JavaPlugin {
     }
 
     public void registerCommands() { 
-    	this.getCommand("track").setExecutor((CommandExecutor)new CmdHandler(this));
-    	this.getCommand("tc").setExecutor((CommandExecutor)new CmdHandler(this));
+        this.getCommand("track").setExecutor((CommandExecutor)new CmdHandler(this));
+        this.getCommand("tc").setExecutor((CommandExecutor)new CmdHandler(this));
     }
 
     public void registerConfig() {
